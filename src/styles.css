@@ -11,7 +11,12 @@ body {
 
 .container {
   margin: 50px auto;
-  max-width: 600px;
+  max-width: 70%;
+  padding: 2rem;
+  border: 1px solid #e2d4c7;
+  background-color: #faf8f5db;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
 }
 
 header {
@@ -23,75 +28,65 @@ h2 {
   font-weight: 700;
 }
 .form-container {
-  margin-bottom: 30px;
-  padding: 20px 30px;
-  background-color: #faf8f5;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  background-color: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(2px);
+  border: 1px solid #e2d4c7;
+  border-radius: 8px;
+  padding: 20px 40px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 60px;
 }
 
 form {
   display: flex;
-}
-
-input,
-select:focus,
-input:focus,
-select,
-select:focus {
-  outline: none;
-  background-color: #f9c5d163;
-}
-
-a {
-  color: #cf1742;
-}
-
-a:hover {
-  color: #698769;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
 }
 
 .instructions {
-  padding: 10px;
-  border: 1px solid #f9c5d1;
-  width: 80%;
-  font-size: 20px;
-  border-radius: 30px;
-  line-height: 15px;
-  font-family: "Cormorant Garamond", serif;
-}
-
-.hint {
-  font-size: 13px;
-  text-align: left;
-  padding-top: 2px;
+  background-color: #fdfbf6;
+  border: 1px solid #e2d4c7;
+  border-radius: 6px;
+  padding: 12px;
+  flex: 3;
+  width: 100%;
+  font-size: 1rem;
+  color: #2e2e2e;
 }
 
 .submit-button {
   margin-left: 10px;
   background-color: #f9c5d1;
   border: none;
-  border-radius: 30px;
+  border-radius: 6px;
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
   font-family: "Cormorant Garamond", serif;
   transition: ease-in-out 0.3s;
 }
-
 .submit-button:hover {
   background-color: #a8c6a8;
 }
 
+input,
+select {
+  outline: none;
+  background-color: #f9c5d163;
+}
+
 .poem {
-  background: #faf8f5;
-  padding: 20px;
-  border-radius: 20px;
-  font-family: "Cormorant Garamond", serif;
+  margin-top: 2rem;
+  font-size: 1.25rem;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  line-height: 2.5;
-  min-height: 200px;
+  line-height: 1.6;
+  padding: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hidden {
@@ -100,8 +95,21 @@ a:hover {
 
 footer {
   text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  line-height: 1.5;
+}
+
+footer a {
+  display: inline-block;
+  margin: 0.25rem;
+  color: #cf1742;
   font-size: 14px;
-  padding-top: 30px;
+}
+
+footer a:hover {
+  color: #698769;
 }
 
 .loader {
@@ -116,5 +124,20 @@ footer {
 @-webkit-keyframes blink-animation {
   to {
     visibility: hidden;
+  }
+}
+
+@media (min-width: 600px) {
+  form {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .instructions {
+    flex: 3;
+  }
+
+  .submit-button {
+    flex: 1;
   }
 }
